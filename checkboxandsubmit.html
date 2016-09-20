@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>where would you like to work?</p>
+
+<form>
+<input type="checkbox" name="job" value="F5 Networks">F5 Networks<br>
+<input type="checkbox" name="job" value="cisco">Cisco<br>
+<br>
+<input type="button" onclick="myFunction()" value="Send answear">
+<br><br>
+<input type="text" id="choice" size="50">
+<input type="submit" value="Submit">
+
+
+</form>
+
+<script>
+function myFunction() {
+    var job = document.forms[0];
+    var txt = "";
+    var i;
+    for (i = 0; i < job.length; i++) {
+        if (job[i].checked) {
+            txt = txt + job[i].value + " ";
+        }
+    }
+    document.getElementById("choice").value = "You would like to work in: " + txt;
+	
+	}
+</script>
+
+</body>
+</html>
